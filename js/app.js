@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
 /* HANDLE CLICK EVENT OF THE NAV LINK TO SCROLL THE SECTION */
 navbarList.addEventListener("click", function(e) {
     if (isLiItem = e.target.nodeName === "LI") {
-        var sectionId = e.target.getAttribute("data-section-id");
+        const sectionId = e.target.getAttribute("data-section-id");
         scrollToSection(sectionId);
     }
 });
@@ -81,7 +81,7 @@ navbarList.addEventListener("click", function(e) {
 /* HANDLE SCROLL EVENT TO UPDATE THE ACTIVATED SECTION */
 document.addEventListener("scroll", function() {
     for (const section of sections) {
-        var offset = getOffset(section);
+        const offset = getOffset(section);
         if (
             window.scrollY > offset.top - 200 &&
             window.scrollY < offset.top + 200
